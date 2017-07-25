@@ -1,0 +1,17 @@
+language: php
+php:
+  - '7.1'
+branches:
+  only:
+  - master
+script:
+  - composer install
+  - vendor/bin/jigsaw build production
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build_production
+  on:
+    branch: master

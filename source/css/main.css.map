@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA;EACI,2BAA2B;CAC9B;;AAED;EACI,sBAAsB;CACzB","file":"main.css","sourcesContent":[".container a {\n    text-decoration: underline;\n}\n\n.post-preview a {\n    text-decoration: none;\n}\n"]}
