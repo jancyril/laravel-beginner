@@ -1,8 +1,9 @@
 ---
-title: Directly upload to AWS S3 using PlUpload with Temporary Credentials
-excerpt: Use AWS temporary credentials to be used on your PlUpload
+title: Directly upload to AWS S3 using PLUpload with Temporary Credentials
+excerpt: Use AWS temporary credentials to be used on your PLUpload
 date: July 24, 2017
 category: Tutorial
+keywords: aws s3 upload, plupload, aws temporary credentials
 ---
 
 @extends('_layouts.master')
@@ -13,8 +14,10 @@ category: Tutorial
             <div class="row">
                 <div class="col-xs-12">
                     <p>
-                        If you are searching for a solution on how to upload directly to your S3 bucket, just like what I did recently, then you came to the right place. In this post, I am going to show you how to directly upload your files to S3 via PlUpload and using AWS temporary credentials to generate short-lived <strong>ACCESS KEY</strong> and <strong>SECRET ACCESS KEY</strong> to be used by PlUpload in your Laravel application.
+                        If you are searching for a solution on how to upload from your Laravel app directly to your S3 bucket - just like what I did recently - then you came to the right place. In this post, I am going to show you how to directly upload your files to S3 via PLUpload and using AWS temporary credentials to generate short-lived <strong>ACCESS KEY</strong> and <strong>SECRET ACCESS KEY</strong>.
                     </p>
+                    
+                    @yield('box-ad')
 
                     <p>
                         <h3>Prerequisites:</h3>
@@ -22,7 +25,7 @@ category: Tutorial
                             <li>
                                 <a href="https://packagist.org/packages/aws/aws-sdk-php" target="_blank">AWS SDK PHP</a>
                             </li>
-                            <li><a href="http://www.plupload.com/" target="_blank">PlUpload</a></li>
+                            <li><a href="http://www.pLupload.com/" target="_blank">PLUpload</a></li>
                             <li>AWS S3 Bucket</li>
                             <li>An IAM user with write access to your S3 bucket</li>
                         </ul>
@@ -42,7 +45,7 @@ category: Tutorial
                     </p>
 
                     <p>
-                        The code shown above are almost similar to the example provided by PlUpload in their <a href="http://www.plupload.com/docs/v2/Upload-to-Amazon-S3" target="_blank">documentation</a>, but with some tweaks to use AWS temporary credentials.
+                        The code shown above are almost similar to the example provided by PLUpload in their <a href="http://www.pLupload.com/docs/v2/Upload-to-Amazon-S3" target="_blank">documentation</a>, but with some tweaks to use AWS temporary credentials.
                     </p>
 
                     <p>
@@ -50,15 +53,15 @@ category: Tutorial
                     </p>
 
                     <p>
-                        Next in the <strong><em>$policy</em></strong>, the unique key that I added here is the <strong><em>x-amz-security-token</em></strong> with a value of the generated Session Token, this is what will allow AWS to verify that the request to upload is valid. Without this key, AWS will return a 403 Access Forbidden error.
+                        Next, in the <strong><em>$policy</em></strong>, the unique key that I added here is the <strong><em>x-amz-security-token</em></strong> with a value of the generated Session Token, this is what will allow AWS to verify that the request to upload is valid. Without this key, AWS will return a 403 Access Forbidden error.
                     </p>
 
                     <p>
-                        Then I will pass the $policy, $signature, $accessKeyId and $token to my view because I will need for the JavaScript part.
+                        Then I passed the $policy, $signature, $accessKeyId and $token to my view because I will be needing for the JavaScript part.
                     </p>
 
                     <p>
-                        In the JavaScript part of this snippets, again, it is almost similar to PlUpload's documentation. The only unique thing that I added here is the <strong><em>x-amz-security-token</em></strong> in the multipart_params with a value of the generated Session Token (PHP variable $token).
+                        For the JS part of this snippet, again, it is almost similar to PLUpload's documentation. The same with my controller, the only unique thing that I added here is the <strong><em>x-amz-security-token</em></strong> in the multipart_params with a value of the generated Session Token.
                     </p>
 
                     <p>
