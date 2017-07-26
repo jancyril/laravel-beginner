@@ -18,5 +18,6 @@ return [
     },
     'headerText' => function ($page, $text = '') {
         return ucwords($text);
-    }
+    },
+    'trackingId' => ''
 ];

@@ -3,6 +3,7 @@
 @include('_partials.post-header')
 @include('_partials.footer')
 @include('_partials.box-ad')
+@include('_partials.analytics')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +56,8 @@
         <hr>
 
         @yield('footer')
+
+        @yield('analytics')
 
         <!-- jQuery -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
