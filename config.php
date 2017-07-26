@@ -10,6 +10,7 @@ return [
             'title' => '',
             'excerpt' => '',
             'date' => '',
+            'keywords' => '',
         ],
     ],
     'headerTitle' => function ($page, $title = '') {

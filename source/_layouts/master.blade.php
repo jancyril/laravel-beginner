@@ -13,6 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{{ $page->siteDescription }}">
+        <meta name="keywords" content="{{ 'laravel, php, aws, tutorial, laravel beginner, laravel for newbie, ' . $page->keywords  }}">
 
         <title>
             {{ $page->siteTitle }} - {{ trim($page->getUrl(), '/') == $page->baseUrl ? $page->siteDescription : $page->title }}
