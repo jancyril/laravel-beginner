@@ -12,10 +12,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{ $page->siteTitle }}">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
+                        <a href="{{ $page->baseUrl }}">Home</a>
                     </li>
                 </ul>
             </div>
