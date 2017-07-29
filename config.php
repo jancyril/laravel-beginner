@@ -11,6 +11,7 @@ return [
             'excerpt' => '',
             'date' => '',
             'keywords' => '',
+            'sort' => '-date',
         ],
     ],
     'headerTitle' => function ($page, $title = '') {
