@@ -12,7 +12,7 @@ return [
             'date' => '',
             'keywords' => '',
             'sort' => '-date',
-            'path' => '{collection}/{slug}'
+            'path' => '{slug}'
         ],
     ],
     'headerTitle' => function ($page, $title = '') {
