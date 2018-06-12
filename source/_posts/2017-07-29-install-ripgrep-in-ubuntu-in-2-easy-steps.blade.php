@@ -2,7 +2,7 @@
 title: Install ripgrep in Ubuntu in 2 easy steps
 excerpt: The easiest way to install ripgrep in Ubuntu.
 slug: install-ripgrep-in-ubuntu-in-2-easy-steps
-date: July 29, 2017
+date: 2017/07/29
 category: Tutorial
 keywords: atom editor, ubuntu, linux brew, install ripgrep
 ---

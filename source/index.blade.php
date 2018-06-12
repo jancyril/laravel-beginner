@@ -19,7 +19,7 @@ pagination:
                             </a>
                         </div>
                         <p class="post-meta">
-                            Posted on {{ $post->date }}
+                            Posted on {{ date('F d, Y', strtotime($post->date)) }}
                         </p>
                     @endforeach
                 @endif
@@ -38,5 +38,5 @@ pagination:
                 </ul>
             </div>
         </div>
-    </div>    
+    </div>
 @endsection

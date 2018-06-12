@@ -2,7 +2,7 @@
 title: Directly upload to AWS S3 using PLUpload with Temporary Credentials
 excerpt: If you are searching for a solution on how to upload from your Laravel app directly to your S3 bucket then you came to the right place.
 slug: direct-upload-to-aws-s3-using-plupload-with-temporary-credentials
-date: July 24, 2017
+date: 2017/07/24
 category: Tutorial
 keywords: aws s3 upload, plupload, aws temporary credentials
 ---
@@ -17,7 +17,7 @@ keywords: aws s3 upload, plupload, aws temporary credentials
                     <p>
                         If you are searching for a solution on how to upload from your Laravel app directly to your S3 bucket - just like what I did recently - then you came to the right place. In this post, I am going to show you how to directly upload your files to S3 via PLUpload and using AWS temporary credentials to generate short-lived <strong>ACCESS KEY</strong> and <strong>SECRET ACCESS KEY</strong>.
                     </p>
-                    
+
                     @yield('box-ad')
 
                     <p>
